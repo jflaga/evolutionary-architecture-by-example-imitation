@@ -2,5 +2,5 @@
 
 public static class PassesApiPaths
 {
-    internal const string Passes = $"{ApiPaths.Root}/passes";
+    public const string Passes = $"{ApiPaths.Root}/passes";
 }

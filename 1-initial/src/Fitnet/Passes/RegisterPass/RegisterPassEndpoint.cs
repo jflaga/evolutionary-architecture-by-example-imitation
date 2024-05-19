@@ -8,7 +8,8 @@ public static class RegisterPassEndpoint
     internal static void MapRegisterPass(this IEndpointRouteBuilder app) =>
         app.MapPost(PassesApiPaths.Passes, (RegisterPassRequest request, PassesPersistence persistence) =>
         {
-            persistence.Add(Pass.Register(request.CustomerId, request.From, request.To));
-            return Results.Ok();
+            var pass = Pass.Register(request.CustomerId, request.From, request.To);
+            persistence.Add(pass);
+            return Results.Created($"{PassesApiPaths.Passes}/{pass.Id}", pass.Id);
         });
 }

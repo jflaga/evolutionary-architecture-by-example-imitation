@@ -1,3 +1,5 @@
+using Fitnet.Contracts;
+using Fitnet.Contracts.Data.Database;
 using Fitnet.Passes;
 using Fitnet.Passes.Data.Database;
 
@@ -9,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<PassesPersistence>();
+builder.Services.AddScoped<ContractsPersistence>();
 
 var app = builder.Build();
 
@@ -22,6 +25,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 PassesEndpoints.Map(app);
+ContractsEndpoint.Map(app);
 
 app.Run();
 

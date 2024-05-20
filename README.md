@@ -8,6 +8,8 @@ Mimicking the original projects in ["Evolutionary Architecture by Example"](http
 
  - > [... by .NET 9, the big feature gaps between the 2 will be gone -- David Fowler](https://www.reddit.com/r/dotnet/comments/17t27cv/controllers_vs_minimal_apis/)
 
+ - Also, Minimal APIs is better for vertical slice architecture, which is being used in the original projects.
+
 **CreateScope() in automatic database migration**
 
  - https://stackoverflow.com/questions/70143755/injecting-services-in-constructor-vs-createscope-in-c-sharp
